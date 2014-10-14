@@ -28,6 +28,12 @@
 		24DE9E1211C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m */; };
 		AA747D9F0F9514B9006C5449 /* ComGuidolimTiclusteredmapkit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ComGuidolimTiclusteredmapkit_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		AF4FA66919ECC5C30022C899 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4FA66819ECC5C30022C899 /* MapKit.framework */; };
+		AF4FA66B19ECC5C80022C899 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4FA66A19ECC5C80022C899 /* CoreLocation.framework */; };
+		AF4FA67219ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.h in Headers */ = {isa = PBXBuildFile; fileRef = AF4FA67019ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.h */; };
+		AF4FA67319ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4FA67119ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.m */; };
+		AF4FA67619ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = AF4FA67419ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.h */; };
+		AF4FA67719ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4FA67519ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,19 +42,25 @@
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = "TiClusteredMapKit";
+			remoteInfo = TiClusteredMapKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		24DD6CF71134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ComGuidolimTiclusteredmapkitModule.h"; path = "Classes/ComGuidolimTiclusteredmapkitModule.h"; sourceTree = "<group>"; };
-		24DD6CF81134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ComGuidolimTiclusteredmapkitModule.m"; path = "Classes/ComGuidolimTiclusteredmapkitModule.m"; sourceTree = "<group>"; };
+		24DD6CF71134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComGuidolimTiclusteredmapkitModule.h; path = Classes/ComGuidolimTiclusteredmapkitModule.h; sourceTree = "<group>"; };
+		24DD6CF81134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComGuidolimTiclusteredmapkitModule.m; path = Classes/ComGuidolimTiclusteredmapkitModule.m; sourceTree = "<group>"; };
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
-		24DE9E0F11C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ComGuidolimTiclusteredmapkitModuleAssets.h"; path = "Classes/ComGuidolimTiclusteredmapkitModuleAssets.h"; sourceTree = "<group>"; };
-		24DE9E1011C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ComGuidolimTiclusteredmapkitModuleAssets.m"; path = "Classes/ComGuidolimTiclusteredmapkitModuleAssets.m"; sourceTree = "<group>"; };
-		AA747D9E0F9514B9006C5449 /* ComGuidolimTiclusteredmapkit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ComGuidolimTiclusteredmapkit_Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		24DE9E0F11C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComGuidolimTiclusteredmapkitModuleAssets.h; path = Classes/ComGuidolimTiclusteredmapkitModuleAssets.h; sourceTree = "<group>"; };
+		24DE9E1011C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComGuidolimTiclusteredmapkitModuleAssets.m; path = Classes/ComGuidolimTiclusteredmapkitModuleAssets.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* ComGuidolimTiclusteredmapkit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComGuidolimTiclusteredmapkit_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D2AAC07E0554694100DB518D /* libComGuidolimTiclusteredmapkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libComGuidolimTiclusteredmapkit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF4FA66819ECC5C30022C899 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AF4FA66A19ECC5C80022C899 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AF4FA67019ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComGuidolimTiclusteredmapkitView.h; path = Classes/ComGuidolimTiclusteredmapkitView.h; sourceTree = "<group>"; };
+		AF4FA67119ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComGuidolimTiclusteredmapkitView.m; path = Classes/ComGuidolimTiclusteredmapkitView.m; sourceTree = "<group>"; };
+		AF4FA67419ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComGuidolimTiclusteredmapkitViewProxy.h; path = Classes/ComGuidolimTiclusteredmapkitViewProxy.h; sourceTree = "<group>"; };
+		AF4FA67519ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComGuidolimTiclusteredmapkitViewProxy.m; path = Classes/ComGuidolimTiclusteredmapkitViewProxy.m; sourceTree = "<group>"; };
+		D2AAC07E0554694100DB518D /* libComGuidolimTiclusteredmapkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libComGuidolimTiclusteredmapkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4FA66B19ECC5C80022C899 /* CoreLocation.framework in Frameworks */,
+				AF4FA66919ECC5C30022C899 /* MapKit.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,12 +93,14 @@
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
-			name = "TiClusteredMapKit";
+			name = TiClusteredMapKit;
 			sourceTree = "<group>";
 		};
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF4FA66A19ECC5C80022C899 /* CoreLocation.framework */,
+				AF4FA66819ECC5C30022C899 /* MapKit.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -93,10 +109,14 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				24DE9E0F11C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.h */,
-				24DE9E1011C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.h */,
 				24DD6CF81134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.m */,
+				24DE9E0F11C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.h */,
+				24DE9E1011C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m */,
+				AF4FA67019ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.h */,
+				AF4FA67119ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.m */,
+				AF4FA67419ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.h */,
+				AF4FA67519ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -119,6 +139,8 @@
 			files = (
 				AA747D9F0F9514B9006C5449 /* ComGuidolimTiclusteredmapkit_Prefix.pch in Headers */,
 				24DD6CF91134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.h in Headers */,
+				AF4FA67219ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.h in Headers */,
+				AF4FA67619ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +160,8 @@
 			);
 			dependencies = (
 			);
-			name = "TiClusteredMapKit";
-			productName = "TiClusteredMapKit";
+			name = TiClusteredMapKit;
+			productName = TiClusteredMapKit;
 			productReference = D2AAC07E0554694100DB518D /* libComGuidolimTiclusteredmapkit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -148,6 +170,8 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "TiClusteredMapKit" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -192,6 +216,8 @@
 			files = (
 				24DD6CFA1134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m in Sources */,
+				AF4FA67719ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.m in Sources */,
+				AF4FA67319ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,22 +236,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphoneos*]" = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphonesimulator*]" = i386;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DSTROOT = "/tmp/ComGuidolimTiclusteredmapkit.dst";
+				DSTROOT = /tmp/ComGuidolimTiclusteredmapkit.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ComGuidolimTiclusteredmapkit_Prefix.pch";
+				GCC_PREFIX_HEADER = ComGuidolimTiclusteredmapkit_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -244,7 +261,7 @@
 					"-DTI_POST_1_2",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "ComGuidolimTiclusteredmapkit";
+				PRODUCT_NAME = ComGuidolimTiclusteredmapkit;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
@@ -258,20 +275,11 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphoneos*]" = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphonesimulator*]" = i386;
-				DSTROOT = "/tmp/ComGuidolimTiclusteredmapkit.dst";
+				DSTROOT = /tmp/ComGuidolimTiclusteredmapkit.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ComGuidolimTiclusteredmapkit_Prefix.pch";
+				GCC_PREFIX_HEADER = ComGuidolimTiclusteredmapkit_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -288,7 +296,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "ComGuidolimTiclusteredmapkit";
+				PRODUCT_NAME = ComGuidolimTiclusteredmapkit;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
@@ -299,22 +307,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphoneos*]" = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphonesimulator*]" = i386;
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DSTROOT = "/tmp/ComGuidolimTiclusteredmapkit.dst";
+				DSTROOT = /tmp/ComGuidolimTiclusteredmapkit.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ComGuidolimTiclusteredmapkit_Prefix.pch";
+				GCC_PREFIX_HEADER = ComGuidolimTiclusteredmapkit_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -332,7 +332,7 @@
 					"-DTI_POST_1_2",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "ComGuidolimTiclusteredmapkit";
+				PRODUCT_NAME = ComGuidolimTiclusteredmapkit;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
@@ -346,20 +346,12 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphoneos*]" = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphonesimulator*]" = i386;
-				DSTROOT = "/tmp/ComGuidolimTiclusteredmapkit.dst";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/ComGuidolimTiclusteredmapkit.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ComGuidolimTiclusteredmapkit_Prefix.pch";
+				GCC_PREFIX_HEADER = ComGuidolimTiclusteredmapkit_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
@@ -375,7 +367,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "ComGuidolimTiclusteredmapkit";
+				PRODUCT_NAME = ComGuidolimTiclusteredmapkit;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";

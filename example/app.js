@@ -1,6 +1,6 @@
 // This is a test harness for your module
-// You should do something interesting in this harness 
-// to test out the module and to provide instructions 
+// You should do something interesting in this harness
+// to test out the module and to provide instructions
 // to users on how to use it by example.
 
 
@@ -13,16 +13,16 @@ win.add(label);
 win.open();
 
 // TODO: write your module tests here
-var TiClusteredMapKit = require('com.guidolim.ticlusteredmapkit');
-Ti.API.info("module is => " + TiClusteredMapKit);
+var ticlusteredmapkit = require('com.guidolim.ticlusteredmapkit');
+Ti.API.info("module is => " + ticlusteredmapkit);
 
-label.text = TiClusteredMapKit.example();
+label.text = ticlusteredmapkit.example();
 
-Ti.API.info("module exampleProp is => " + TiClusteredMapKit.exampleProp);
-TiClusteredMapKit.exampleProp = "This is a test value";
+Ti.API.info("module exampleProp is => " + ticlusteredmapkit.exampleProp);
+ticlusteredmapkit.exampleProp = "This is a test value";
 
 if (Ti.Platform.name == "android") {
-	var proxy = TiClusteredMapKit.createExample({
+	var proxy = ticlusteredmapkit.createExample({
 		message: "Creating an example Proxy",
 		backgroundColor: "red",
 		width: 100,

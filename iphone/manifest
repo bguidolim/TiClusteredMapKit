@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+description: TiClusteredMapKit
+author: Your Name
+license: Specify your license
+copyright: Copyright (c) 2014 by Your Company
+
+# these should not be edited
+name: TiClusteredMapKit
+moduleid: com.guidolim.ticlusteredmapkit
+guid: dd3f7512-1cb0-431e-8d4f-bb11dc3b5f2a
+platform: iphone
+minsdk: 3.4.0.GA

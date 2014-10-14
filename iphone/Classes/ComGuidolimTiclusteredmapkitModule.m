@@ -1,9 +1,10 @@
 /**
- * Your Copyright Here
+ * TiClusteredMapKit
  *
- * Appcelerator Titanium is Copyright (c) 2009-2010 by Appcelerator, Inc.
- * and licensed under the Apache Public License (version 2)
+ * Created by Your Name
+ * Copyright (c) 2014 Your Company. All rights reserved.
  */
+
 #import "ComGuidolimTiclusteredmapkitModule.h"
 #import "TiBase.h"
 #import "TiHost.h"
@@ -16,7 +17,7 @@
 // this is generated for your module, please do not change it
 -(id)moduleGUID
 {
-	return @"71121118-1f11-461e-9913-06ebf8378f5f";
+	return @"dd3f7512-1cb0-431e-8d4f-bb11dc3b5f2a";
 }
 
 // this is generated for your module, please do not change it
@@ -32,7 +33,7 @@
 	// this method is called when the module is first loaded
 	// you *must* call the superclass
 	[super startup];
-	
+
 	NSLog(@"[INFO] %@ loaded",self);
 }
 
@@ -41,12 +42,12 @@
 	// this method is called when the module is being unloaded
 	// typically this is during shutdown. make sure you don't do too
 	// much processing here or the app will be quit forceably
-	
+
 	// you *must* call the superclass
 	[super shutdown:sender];
 }
 
-#pragma mark Cleanup 
+#pragma mark Cleanup
 
 -(void)dealloc
 {
@@ -69,7 +70,7 @@
 {
 	if (count == 1 && [type isEqualToString:@"my_event"])
 	{
-		// the first (of potentially many) listener is being added 
+		// the first (of potentially many) listener is being added
 		// for event named 'my_event'
 	}
 }
