@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -28,6 +28,26 @@
 		24DE9E1211C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m */; };
 		AA747D9F0F9514B9006C5449 /* ComGuidolimTiclusteredmapkit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ComGuidolimTiclusteredmapkit_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		AF279EC019EE039D00C78D92 /* BGAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279EBE19EE039D00C78D92 /* BGAnnotation.h */; };
+		AF279EC119EE039D00C78D92 /* BGAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF279EBF19EE039D00C78D92 /* BGAnnotation.m */; };
+		AF279ECB19EE0D1F00C78D92 /* BGMapViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279EC919EE0D1F00C78D92 /* BGMapViewDelegate.h */; };
+		AF279ECC19EE0D1F00C78D92 /* BGMapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF279ECA19EE0D1F00C78D92 /* BGMapViewDelegate.m */; };
+		AF279F1619EE2AD200C78D92 /* kp_2dtree.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F0619EE2AD200C78D92 /* kp_2dtree.h */; };
+		AF279F1719EE2AD200C78D92 /* KPAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F0719EE2AD200C78D92 /* KPAnnotation.h */; };
+		AF279F1819EE2AD200C78D92 /* KPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF279F0819EE2AD200C78D92 /* KPAnnotation.m */; };
+		AF279F1919EE2AD200C78D92 /* KPAnnotationTree.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F0919EE2AD200C78D92 /* KPAnnotationTree.h */; };
+		AF279F1A19EE2AD200C78D92 /* KPAnnotationTree.m in Sources */ = {isa = PBXBuildFile; fileRef = AF279F0A19EE2AD200C78D92 /* KPAnnotationTree.m */; };
+		AF279F1B19EE2AD200C78D92 /* KPAnnotationTree_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F0B19EE2AD200C78D92 /* KPAnnotationTree_Private.h */; };
+		AF279F1C19EE2AD200C78D92 /* KPClusteringAlgorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F0C19EE2AD200C78D92 /* KPClusteringAlgorithm.h */; };
+		AF279F1D19EE2AD200C78D92 /* KPClusteringController.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F0D19EE2AD200C78D92 /* KPClusteringController.h */; };
+		AF279F1E19EE2AD200C78D92 /* KPClusteringController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF279F0E19EE2AD200C78D92 /* KPClusteringController.m */; };
+		AF279F1F19EE2AD200C78D92 /* KPGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F0F19EE2AD200C78D92 /* KPGeometry.h */; };
+		AF279F2019EE2AD200C78D92 /* KPGridClusteringAlgorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F1019EE2AD200C78D92 /* KPGridClusteringAlgorithm.h */; };
+		AF279F2119EE2AD200C78D92 /* KPGridClusteringAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = AF279F1119EE2AD200C78D92 /* KPGridClusteringAlgorithm.m */; };
+		AF279F2219EE2AD200C78D92 /* KPGridClusteringAlgorithm_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F1219EE2AD200C78D92 /* KPGridClusteringAlgorithm_Private.h */; };
+		AF279F2319EE2AD200C78D92 /* KPGridClusteringAlgorithmDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F1319EE2AD200C78D92 /* KPGridClusteringAlgorithmDelegate.h */; };
+		AF279F2419EE2AD200C78D92 /* NSArray+KP.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F1419EE2AD200C78D92 /* NSArray+KP.h */; };
+		AF279F2519EE2AD200C78D92 /* NSArray+KP.m in Sources */ = {isa = PBXBuildFile; fileRef = AF279F1519EE2AD200C78D92 /* NSArray+KP.m */; };
 		AF4FA66919ECC5C30022C899 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4FA66819ECC5C30022C899 /* MapKit.framework */; };
 		AF4FA66B19ECC5C80022C899 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4FA66A19ECC5C80022C899 /* CoreLocation.framework */; };
 		AF4FA67219ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.h in Headers */ = {isa = PBXBuildFile; fileRef = AF4FA67019ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.h */; };
@@ -54,6 +74,26 @@
 		24DE9E1011C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComGuidolimTiclusteredmapkitModuleAssets.m; path = Classes/ComGuidolimTiclusteredmapkitModuleAssets.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ComGuidolimTiclusteredmapkit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComGuidolimTiclusteredmapkit_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF279EBE19EE039D00C78D92 /* BGAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BGAnnotation.h; path = Classes/BGAnnotation.h; sourceTree = "<group>"; };
+		AF279EBF19EE039D00C78D92 /* BGAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BGAnnotation.m; path = Classes/BGAnnotation.m; sourceTree = "<group>"; };
+		AF279EC919EE0D1F00C78D92 /* BGMapViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BGMapViewDelegate.h; path = Classes/BGMapViewDelegate.h; sourceTree = "<group>"; };
+		AF279ECA19EE0D1F00C78D92 /* BGMapViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BGMapViewDelegate.m; path = Classes/BGMapViewDelegate.m; sourceTree = "<group>"; };
+		AF279F0619EE2AD200C78D92 /* kp_2dtree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kp_2dtree.h; sourceTree = "<group>"; };
+		AF279F0719EE2AD200C78D92 /* KPAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAnnotation.h; sourceTree = "<group>"; };
+		AF279F0819EE2AD200C78D92 /* KPAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAnnotation.m; sourceTree = "<group>"; };
+		AF279F0919EE2AD200C78D92 /* KPAnnotationTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAnnotationTree.h; sourceTree = "<group>"; };
+		AF279F0A19EE2AD200C78D92 /* KPAnnotationTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAnnotationTree.m; sourceTree = "<group>"; };
+		AF279F0B19EE2AD200C78D92 /* KPAnnotationTree_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAnnotationTree_Private.h; sourceTree = "<group>"; };
+		AF279F0C19EE2AD200C78D92 /* KPClusteringAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPClusteringAlgorithm.h; sourceTree = "<group>"; };
+		AF279F0D19EE2AD200C78D92 /* KPClusteringController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPClusteringController.h; sourceTree = "<group>"; };
+		AF279F0E19EE2AD200C78D92 /* KPClusteringController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPClusteringController.m; sourceTree = "<group>"; };
+		AF279F0F19EE2AD200C78D92 /* KPGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGeometry.h; sourceTree = "<group>"; };
+		AF279F1019EE2AD200C78D92 /* KPGridClusteringAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGridClusteringAlgorithm.h; sourceTree = "<group>"; };
+		AF279F1119EE2AD200C78D92 /* KPGridClusteringAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGridClusteringAlgorithm.m; sourceTree = "<group>"; };
+		AF279F1219EE2AD200C78D92 /* KPGridClusteringAlgorithm_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGridClusteringAlgorithm_Private.h; sourceTree = "<group>"; };
+		AF279F1319EE2AD200C78D92 /* KPGridClusteringAlgorithmDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGridClusteringAlgorithmDelegate.h; sourceTree = "<group>"; };
+		AF279F1419EE2AD200C78D92 /* NSArray+KP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+KP.h"; sourceTree = "<group>"; };
+		AF279F1519EE2AD200C78D92 /* NSArray+KP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KP.m"; sourceTree = "<group>"; };
 		AF4FA66819ECC5C30022C899 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AF4FA66A19ECC5C80022C899 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AF4FA67019ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComGuidolimTiclusteredmapkitView.h; path = Classes/ComGuidolimTiclusteredmapkitView.h; sourceTree = "<group>"; };
@@ -109,6 +149,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AF279EBD19EE02C200C78D92 /* Custom */,
 				24DD6CF71134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.h */,
 				24DD6CF81134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.m */,
 				24DE9E0F11C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.h */,
@@ -130,6 +171,42 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		AF279EBD19EE02C200C78D92 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				AF279F0519EE2AD200C78D92 /* kingpin */,
+				AF279EBE19EE039D00C78D92 /* BGAnnotation.h */,
+				AF279EBF19EE039D00C78D92 /* BGAnnotation.m */,
+				AF279EC919EE0D1F00C78D92 /* BGMapViewDelegate.h */,
+				AF279ECA19EE0D1F00C78D92 /* BGMapViewDelegate.m */,
+			);
+			name = Custom;
+			sourceTree = "<group>";
+		};
+		AF279F0519EE2AD200C78D92 /* kingpin */ = {
+			isa = PBXGroup;
+			children = (
+				AF279F0619EE2AD200C78D92 /* kp_2dtree.h */,
+				AF279F0719EE2AD200C78D92 /* KPAnnotation.h */,
+				AF279F0819EE2AD200C78D92 /* KPAnnotation.m */,
+				AF279F0919EE2AD200C78D92 /* KPAnnotationTree.h */,
+				AF279F0A19EE2AD200C78D92 /* KPAnnotationTree.m */,
+				AF279F0B19EE2AD200C78D92 /* KPAnnotationTree_Private.h */,
+				AF279F0C19EE2AD200C78D92 /* KPClusteringAlgorithm.h */,
+				AF279F0D19EE2AD200C78D92 /* KPClusteringController.h */,
+				AF279F0E19EE2AD200C78D92 /* KPClusteringController.m */,
+				AF279F0F19EE2AD200C78D92 /* KPGeometry.h */,
+				AF279F1019EE2AD200C78D92 /* KPGridClusteringAlgorithm.h */,
+				AF279F1119EE2AD200C78D92 /* KPGridClusteringAlgorithm.m */,
+				AF279F1219EE2AD200C78D92 /* KPGridClusteringAlgorithm_Private.h */,
+				AF279F1319EE2AD200C78D92 /* KPGridClusteringAlgorithmDelegate.h */,
+				AF279F1419EE2AD200C78D92 /* NSArray+KP.h */,
+				AF279F1519EE2AD200C78D92 /* NSArray+KP.m */,
+			);
+			name = kingpin;
+			path = src;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -137,11 +214,24 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF279ECB19EE0D1F00C78D92 /* BGMapViewDelegate.h in Headers */,
+				AF279F1619EE2AD200C78D92 /* kp_2dtree.h in Headers */,
+				AF279F1919EE2AD200C78D92 /* KPAnnotationTree.h in Headers */,
+				AF279F2219EE2AD200C78D92 /* KPGridClusteringAlgorithm_Private.h in Headers */,
+				AF279F1C19EE2AD200C78D92 /* KPClusteringAlgorithm.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* ComGuidolimTiclusteredmapkit_Prefix.pch in Headers */,
+				AF279F2419EE2AD200C78D92 /* NSArray+KP.h in Headers */,
+				AF279F1F19EE2AD200C78D92 /* KPGeometry.h in Headers */,
+				AF279F1719EE2AD200C78D92 /* KPAnnotation.h in Headers */,
+				AF279F2319EE2AD200C78D92 /* KPGridClusteringAlgorithmDelegate.h in Headers */,
+				AF279F1B19EE2AD200C78D92 /* KPAnnotationTree_Private.h in Headers */,
 				24DD6CF91134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.h in Headers */,
 				AF4FA67219ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.h in Headers */,
+				AF279F1D19EE2AD200C78D92 /* KPClusteringController.h in Headers */,
 				AF4FA67619ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.h in Headers */,
+				AF279F2019EE2AD200C78D92 /* KPGridClusteringAlgorithm.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.h in Headers */,
+				AF279EC019EE039D00C78D92 /* BGAnnotation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,9 +261,10 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0600;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "TiClusteredMapKit" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -215,7 +306,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				24DD6CFA1134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.m in Sources */,
+				AF279F1E19EE2AD200C78D92 /* KPClusteringController.m in Sources */,
+				AF279F2119EE2AD200C78D92 /* KPGridClusteringAlgorithm.m in Sources */,
+				AF279ECC19EE0D1F00C78D92 /* BGMapViewDelegate.m in Sources */,
+				AF279F2519EE2AD200C78D92 /* NSArray+KP.m in Sources */,
+				AF279F1819EE2AD200C78D92 /* KPAnnotation.m in Sources */,
+				AF279F1A19EE2AD200C78D92 /* KPAnnotationTree.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m in Sources */,
+				AF279EC119EE039D00C78D92 /* BGAnnotation.m in Sources */,
 				AF4FA67719ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.m in Sources */,
 				AF4FA67319ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.m in Sources */,
 			);
@@ -278,6 +376,7 @@
 				DSTROOT = /tmp/ComGuidolimTiclusteredmapkit.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ComGuidolimTiclusteredmapkit_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
@@ -327,6 +426,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DDEBUG",
 					"-DTI_POST_1_2",

@@ -6,9 +6,13 @@
  */
 #import "TiUIView.h"
 #import <MapKit/MapKit.h>
+#import "BGMapViewDelegate.h"
 
-@interface ComGuidolimTiclusteredmapkitView : TiUIView <MKMapViewDelegate> {
+@interface ComGuidolimTiclusteredmapkitView : TiUIView {
     MKMapView *mapView;
+    BGMapViewDelegate *mapViewDelegate;
 }
+
+- (void)setAnnotations:(id)args;
 
 @end

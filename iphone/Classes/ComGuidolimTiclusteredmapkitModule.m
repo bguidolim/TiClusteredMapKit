@@ -104,4 +104,10 @@
 	// example property setter
 }
 
+-(id)createAnnotation:(id)args
+{
+    ENSURE_SINGLE_ARG(args,NSDictionary);
+    return args;
+}
+
 @end

@@ -11,6 +11,10 @@
 
 @implementation ComGuidolimTiclusteredmapkitViewProxy
 
-
+-(void)setAnnotations:(id)arg
+{
+    ENSURE_ARRAY(arg);
+    TiThreadPerformOnMainThread(^{[(ComGuidolimTiclusteredmapkitView*)[self view] setAnnotations:arg];}, NO);
+}
 
 @end
