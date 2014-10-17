@@ -56,7 +56,11 @@
         annotation._coordinate = CLLocationCoordinate2DMake([TiUtils doubleValue:[dict objectForKey:@"latitude"]],[TiUtils doubleValue:[dict objectForKey:@"longitude"]]);
         annotation._title = [TiUtils stringValue:[dict objectForKey:@"title"]];
         annotation._subtitle = [TiUtils stringValue:[dict objectForKey:@"subtitle"]];
-        annotation.userInfo = dict;
+        
+        NSMutableDictionary *mutableDict = [NSMutableDictionary dictionaryWithDictionary:dict];
+        [mutableDict setObject:self.proxy forKey:@"proxy"];
+        
+        annotation.userInfo = mutableDict;
         
         [annotations addObject:annotation];
     }];

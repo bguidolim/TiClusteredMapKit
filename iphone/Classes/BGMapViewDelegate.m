@@ -32,17 +32,27 @@
             return pinView;
         } else {
             BGAnnotation *bgAnnonation = [[clusterAnnotation.annotations allObjects] objectAtIndex:0];
-//            clusterAnnotation.title = bgAnnonation.title;
-//            clusterAnnotation.subtitle = bgAnnonation.subtitle;
+            clusterAnnotation.title = bgAnnonation.title;
+            clusterAnnotation.subtitle = bgAnnonation.subtitle;
             
             if ([bgAnnonation.userInfo objectForKey:@"image"]) {
-                //Custom view
+                //Image
                 MKAnnotationView *annotationView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"pin"];
                 if (annotationView == nil) {
                     annotationView = [[MKAnnotationView alloc] initWithAnnotation:bgAnnonation reuseIdentifier:@"pin"];
                 }
                 
-                annotationView.annotation = bgAnnonation;
+                TiProxy *proxy = [bgAnnonation.userInfo objectForKey:@"proxy"];
+                UIImage *image = [TiUtils image:[bgAnnonation.userInfo objectForKey:@"image"] proxy:proxy];
+                annotationView.image = image;
+                
+                if ([bgAnnonation.userInfo objectForKey:@"centerOffset"]) {
+                    CGPoint centerOffset = [TiUtils pointValue:[bgAnnonation.userInfo objectForKey:@"centerOffset"]];
+                    annotationView.centerOffset = centerOffset;
+                }
+                
+                annotationView.canShowCallout = [TiUtils boolValue:[bgAnnonation.userInfo objectForKey:@"canShowCallout"]];
+                annotationView.draggable = [TiUtils boolValue:[bgAnnonation.userInfo objectForKey:@"draggable"]];
                 
                 return annotationView;
                 
@@ -52,8 +62,6 @@
                 if (pinView == nil) {
                     pinView = [[MKPinAnnotationView alloc] initWithAnnotation:bgAnnonation reuseIdentifier:@"pin"];
                 }
-                
-                pinView.annotation = bgAnnonation;
             
                 if ([bgAnnonation.userInfo objectForKey:@"pincolor"]) {
                     switch ([[bgAnnonation.userInfo objectForKey:@"pincolor"] integerValue]) {
@@ -76,7 +84,8 @@
                     pinView.pinColor = MKPinAnnotationColorRed;
                 }
 
-                pinView.canShowCallout = YES;
+                pinView.canShowCallout = [TiUtils boolValue:[bgAnnonation.userInfo objectForKey:@"canShowCallout"]];
+                pinView.draggable = [TiUtils boolValue:[bgAnnonation.userInfo objectForKey:@"draggable"]];
                 
                 return pinView;
             }
