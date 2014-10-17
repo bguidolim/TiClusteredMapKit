@@ -9,8 +9,17 @@
 #import "TiBase.h"
 #import "TiHost.h"
 #import "TiUtils.h"
+#import <MapKit/MapKit.h>
 
 @implementation ComGuidolimTiclusteredmapkitModule
+
+MAKE_SYSTEM_PROP(NORMAL_TYPE,MKMapTypeStandard);
+MAKE_SYSTEM_PROP(SATELLITE_TYPE,MKMapTypeSatellite);
+MAKE_SYSTEM_PROP(HYBRID_TYPE,MKMapTypeHybrid);
+
+MAKE_SYSTEM_PROP(ANNOTATION_RED, MKPinAnnotationColorRed);
+MAKE_SYSTEM_PROP(ANNOTATION_PURPLE, MKPinAnnotationColorPurple);
+MAKE_SYSTEM_PROP(ANNOTATION_GREEN, MKPinAnnotationColorGreen);
 
 #pragma mark Internal
 

@@ -8,7 +8,13 @@
 #import "TiModule.h"
 
 @interface ComGuidolimTiclusteredmapkitModule : TiModule
-{
-}
+
+@property (nonatomic,readonly) NSNumber *NORMAL_TYPE;
+@property (nonatomic,readonly) NSNumber *SATELLITE_TYPE;
+@property (nonatomic,readonly) NSNumber *HYBRID_TYPE;
+
+@property (nonatomic,readonly) NSNumber *ANNOTATION_RED;
+@property (nonatomic,readonly) NSNumber *ANNOTATION_PURPLE;
+@property (nonatomic,readonly) NSNumber *ANNOTATION_GREEN;
 
 @end

@@ -65,16 +65,28 @@
 }
 
 #pragma mark - Properties
+-(void)setUserLocation_:(id)value {
+    mapView.showsUserLocation = [TiUtils boolValue:value];
+}
+
 - (void)setMapType_:(id)value {
-    
+    mapView.mapType = [TiUtils intValue:value];
 }
 
 - (void)setZoomEnabled_:(id)value {
-    
+    mapView.zoomEnabled = [TiUtils boolValue:value];
 }
 
 - (void)setScrollEnabled_:(id)value {
-    
+    mapView.scrollEnabled = [TiUtils boolValue:value];
+}
+
+- (void)setPitchEnabled_:(id)value {
+    mapView.pitchEnabled = [TiUtils boolValue:value];
+}
+
+- (void)setRotateEnabled_:(id)value {
+    mapView.rotateEnabled = [TiUtils boolValue:value];
 }
 
 
