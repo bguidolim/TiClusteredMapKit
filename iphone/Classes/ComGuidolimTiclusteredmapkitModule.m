@@ -13,14 +13,6 @@
 
 @implementation ComGuidolimTiclusteredmapkitModule
 
-MAKE_SYSTEM_PROP(NORMAL_TYPE,MKMapTypeStandard);
-MAKE_SYSTEM_PROP(SATELLITE_TYPE,MKMapTypeSatellite);
-MAKE_SYSTEM_PROP(HYBRID_TYPE,MKMapTypeHybrid);
-
-MAKE_SYSTEM_PROP(ANNOTATION_RED, MKPinAnnotationColorRed);
-MAKE_SYSTEM_PROP(ANNOTATION_PURPLE, MKPinAnnotationColorPurple);
-MAKE_SYSTEM_PROP(ANNOTATION_GREEN, MKPinAnnotationColorGreen);
-
 #pragma mark Internal
 
 // this is generated for your module, please do not change it
@@ -111,12 +103,6 @@ MAKE_SYSTEM_PROP(ANNOTATION_GREEN, MKPinAnnotationColorGreen);
 -(void)setExampleProp:(id)value
 {
 	// example property setter
-}
-
--(id)createAnnotation:(id)args
-{
-    ENSURE_SINGLE_ARG(args,NSDictionary);
-    return args;
 }
 
 @end
