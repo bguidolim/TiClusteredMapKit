@@ -10,6 +10,9 @@
 
 @interface ComGuidolimTiclusteredmapkitView : TiUIView {
     MKMapView *mapView;
+    MKCoordinateRegion region;
+    BOOL regionFits;
+    BOOL animate;
     BGMapViewDelegate *mapViewDelegate;
 }
 

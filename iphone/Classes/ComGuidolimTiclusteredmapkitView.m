@@ -10,16 +10,13 @@
 
 @implementation ComGuidolimTiclusteredmapkitView
 
--(void)initializeState
-{
+-(void)initializeState {
     // This method is called right after allocating the view and
     // is useful for initializing anything specific to the view
     
     [self createMapView];
     
     [super initializeState];
-    
-    NSLog(@"[VIEW LIFECYCLE EVENT] initializeState");
 }
 
 - (void)createMapView {
@@ -29,6 +26,7 @@
         
         mapViewDelegate = [[BGMapViewDelegate alloc] init];
         mapViewDelegate.clusteringController = [[KPClusteringController alloc] initWithMapView:mapView];
+        mapViewDelegate.mapViewProxy = self.proxy;
         [mapView setDelegate:mapViewDelegate];
         
         [self addSubview:mapView];
@@ -36,11 +34,29 @@
 }
 
 - (void)frameSizeChanged:(CGRect)frame bounds:(CGRect)bounds {
-    NSLog(@"[VIEW LIFECYCLE EVENT] frameSizeChanged");
     if (mapView == nil) {
         [self createMapView];
     }
     [TiUtils setView:mapView positionRect:bounds];
+}
+
+-(void)render {
+    if (![NSThread isMainThread]) {
+        TiThreadPerformOnMainThread(^{[self render];}, NO);
+        return;
+    }
+
+    if (mapView == nil || mapView.bounds.size.width == 0 || mapView.bounds.size.height == 0) {
+        return;
+    }
+    
+    if (region.center.latitude!=0 && region.center.longitude!=0 && !isnan(region.center.latitude) && !isnan(region.center.longitude)) {
+        if (regionFits) {
+            [mapView setRegion:[mapView regionThatFits:region] animated:animate];
+        } else {
+            [mapView setRegion:region animated:animate];
+        }
+    }
 }
 
 #pragma mark Annotations
@@ -57,10 +73,7 @@
         annotation._title = [TiUtils stringValue:[dict objectForKey:@"title"]];
         annotation._subtitle = [TiUtils stringValue:[dict objectForKey:@"subtitle"]];
         
-        NSMutableDictionary *mutableDict = [NSMutableDictionary dictionaryWithDictionary:dict];
-        [mutableDict setObject:self.proxy forKey:@"proxy"];
-        
-        annotation.userInfo = mutableDict;
+        annotation.userInfo = dict;
         
         [annotations addObject:annotation];
     }];
@@ -93,5 +106,64 @@
     mapView.rotateEnabled = [TiUtils boolValue:value];
 }
 
+-(void)setRegionFit_:(id)value {
+    regionFits = [TiUtils boolValue:value];
+    [self render];
+}
+
+-(void)setAnimate_:(id)value {
+    animate = [TiUtils boolValue:value];
+}
+
+-(void)setRegion_:(id)location {
+    ENSURE_SINGLE_ARG(location,NSDictionary);
+    
+    [self setLocation_:location];
+}
+
+-(void)setLocation_:(id)location {
+    ENSURE_SINGLE_ARG(location,NSDictionary);
+    
+    id lat = [location objectForKey:@"latitude"];
+    id lon = [location objectForKey:@"longitude"];
+    id latdelta = [location objectForKey:@"latitudeDelta"];
+    id londelta = [location objectForKey:@"longitudeDelta"];
+    
+    if (lat) {
+        region.center.latitude = [lat doubleValue];
+    }
+    
+    if (lon) {
+        region.center.longitude = [lon doubleValue];
+    }
+    
+    if (latdelta) {
+        region.span.latitudeDelta = [latdelta doubleValue];
+    }
+    
+    if (londelta) {
+        region.span.longitudeDelta = [londelta doubleValue];
+    }
+    
+    id an = [location objectForKey:@"animate"];
+    if (an) {
+        animate = [an boolValue];
+    }
+    
+    id rf = [location objectForKey:@"regionFit"];
+    if (rf) {
+        regionFits = [rf boolValue];
+    }
+    [self render];
+}
+
+-(void)willFirePropertyChanges {
+    regionFits = [TiUtils boolValue:[self.proxy valueForKey:@"regionFit"]];
+    animate = [TiUtils boolValue:[self.proxy valueForKey:@"animate"]];
+}
+
+-(void)didFirePropertyChanges {
+    [self render];
+}
 
 @end
