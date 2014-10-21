@@ -12,6 +12,7 @@
 #import "TiBase.h"
 #import "TiButtonUtil.h"
 #import "TiViewProxy.h"
+#import "TiUILabelProxy.h"
 
 #define LEFT_BUTTON  1
 #define RIGHT_BUTTON 2
@@ -88,8 +89,22 @@
     return button_view;
 }
 
-- (void)configureCounter {
-    
+- (void)configureCounter:(MKAnnotationView *)annotationView count:(NSInteger)count {
+    if ([self.clusterPin objectForKey:@"counterLabel"]) {
+        UILabel *label = [annotationView viewWithTag:999];
+        
+        TiUILabelProxy *viewProxy = (TiUILabelProxy *)[self.clusterPin objectForKey:@"counterLabel"];
+        id labelView = viewProxy.view;
+        
+        UILabel *newLabel = [labelView label];
+        label.text = [NSString stringWithFormat:@"%ld",(long)count];
+        label.font = newLabel.font;
+        label.textColor = newLabel.textColor;
+        label.textAlignment = newLabel.textAlignment;
+        
+        [label sizeToFit];
+        [annotationView bringSubviewToFront:label];
+    }
 }
 
 #pragma mark - MapView Delegate
@@ -124,6 +139,10 @@
             MKAnnotationView *annotationView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
             if (annotationView == nil) {
                 annotationView = [[MKAnnotationView alloc] initWithAnnotation:ann reuseIdentifier:identifier];
+                UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+                label.tag = 999;
+                
+                [annotationView addSubview:label];
             }
             
             TiViewProxy *viewProxy = (TiViewProxy*)[userInfo objectForKey:@"customView"];
@@ -136,7 +155,7 @@
             [self setAnnotationProperties:annotationView dictionaty:userInfo];
             
             if (clusterAnnotation.isCluster) {
-                [self configureCounter];
+                [self configureCounter:annotationView count:clusterAnnotation.annotations.count];
             }
             
             return annotationView;
@@ -149,6 +168,11 @@
             MKAnnotationView *annotationView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
             if (annotationView == nil) {
                 annotationView = [[MKAnnotationView alloc] initWithAnnotation:ann reuseIdentifier:identifier];
+                
+                UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+                label.tag = 999;
+                
+                [annotationView addSubview:label];
             }
             
             UIImage *image = [TiUtils image:[userInfo objectForKey:@"image"] proxy:self.mapViewProxy];
@@ -157,7 +181,7 @@
             [self setAnnotationProperties:annotationView dictionaty:userInfo];
             
             if (clusterAnnotation.isCluster) {
-                [self configureCounter];
+                [self configureCounter:annotationView count:clusterAnnotation.annotations.count];
             }
             
             return annotationView;
