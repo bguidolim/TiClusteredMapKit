@@ -101,6 +101,7 @@
         label.font = newLabel.font;
         label.textColor = newLabel.textColor;
         label.textAlignment = newLabel.textAlignment;
+        label.frame = newLabel.frame;
         
         [label sizeToFit];
         [annotationView bringSubviewToFront:label];
