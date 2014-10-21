@@ -73,7 +73,14 @@
         annotation._title = [TiUtils stringValue:[dict objectForKey:@"title"]];
         annotation._subtitle = [TiUtils stringValue:[dict objectForKey:@"subtitle"]];
         
-        annotation.userInfo = dict;
+        annotation.properties = dict;
+        
+        if ([dict objectForKey:@"userInfo"]) {
+            NSDictionary *userInfo = [dict objectForKey:@"userInfo"];
+            ENSURE_TYPE(userInfo, NSDictionary);
+            
+            annotation.userInfo = userInfo;
+        }
         
         [annotations addObject:annotation];
     }];

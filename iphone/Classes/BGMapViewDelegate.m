@@ -127,7 +127,7 @@
             ann = (BGAnnotation *)[[clusterAnnotation.annotations allObjects] objectAtIndex:0];
             clusterAnnotation.title = ann.title;
             clusterAnnotation.subtitle = ann.subtitle;
-            userInfo = [(BGAnnotation *)ann userInfo];
+            userInfo = [(BGAnnotation *)ann properties];
         }
         
         if ([userInfo objectForKey:@"customView"]) {
@@ -249,7 +249,8 @@
 
 #pragma mark Click handler
 - (void)fireClickEvent:(MKAnnotationView *)pinview source:(NSString *)source{
-    BGAnnotation *annotation = (BGAnnotation *)pinview.annotation;
+    KPAnnotation *cAnnotation = (KPAnnotation *)pinview.annotation;
+    BGAnnotation *annotation = [[cAnnotation.annotations allObjects] objectAtIndex:0];
     
     BOOL parentWants = [self.mapViewProxy _hasListeners:@"click"];
     if(!parentWants) {
@@ -263,6 +264,7 @@
                             clicksource,@"clicksource",
                             self.mapViewProxy,@"map",
                             indexNumber,@"index",
+                            annotation.userInfo,@"userInfo",
                             nil];
     
     if (parentWants){

@@ -14,6 +14,7 @@
 @property (copy, nonatomic) NSString *_title;
 @property (copy, nonatomic) NSString *_subtitle;
 @property (assign, nonatomic) CLLocationCoordinate2D _coordinate;
+@property (strong, nonatomic) NSDictionary *properties;
 @property (strong, nonatomic) NSDictionary *userInfo;
 
 @end
