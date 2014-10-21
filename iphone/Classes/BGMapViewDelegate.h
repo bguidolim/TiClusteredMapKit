@@ -15,5 +15,6 @@
 
 @property (strong, nonatomic) KPClusteringController *clusteringController;
 @property (strong, nonatomic) TiProxy *mapViewProxy;
+@property (strong, nonatomic) NSDictionary *clusterPin;
 
 @end

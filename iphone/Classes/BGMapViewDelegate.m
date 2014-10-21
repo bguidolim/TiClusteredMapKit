@@ -65,7 +65,7 @@
     return nil;
 }
 
--(UIView*)makeButton:(id)button tag:(int)buttonTag annotation:(NSDictionary *)dict {
+- (UIView*)makeButton:(id)button tag:(int)buttonTag annotation:(NSDictionary *)dict {
     UIView *button_view = nil;
     if ([button isKindOfClass:[NSNumber class]]) {
         // this is button type constant
@@ -88,90 +88,114 @@
     return button_view;
 }
 
+- (void)configureCounter {
+    
+}
+
 #pragma mark - MapView Delegate
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
     if ([annotation isKindOfClass:[KPAnnotation class]]) {
         KPAnnotation *clusterAnnotation = (KPAnnotation *)annotation;
         
-        if ([clusterAnnotation isCluster]) {
-            MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"cluster-pin"];
+        id<MKAnnotation> ann;
+        NSDictionary *userInfo;
+        NSString *identifier = nil;
+        
+        if (clusterAnnotation.isCluster) {
+            ann = (KPAnnotation *)clusterAnnotation;
+            userInfo = self.clusterPin;
+            identifier = @"cluster-pin";
             
-            if (pinView == nil) {
-                pinView = [[MKPinAnnotationView alloc] initWithAnnotation:clusterAnnotation reuseIdentifier:@"cluster-pin"];
+            if ([userInfo objectForKey:@"clusterName"]) {
+                clusterAnnotation.title = [NSString stringWithFormat:@"%lu %@",(unsigned long)clusterAnnotation.annotations.count, [userInfo objectForKey:@"clusterName"]];
+            }
+        } else {
+            ann = (BGAnnotation *)[[clusterAnnotation.annotations allObjects] objectAtIndex:0];
+            clusterAnnotation.title = ann.title;
+            clusterAnnotation.subtitle = ann.subtitle;
+            userInfo = [(BGAnnotation *)ann userInfo];
+        }
+        
+        if ([userInfo objectForKey:@"customView"]) {
+            if (identifier == nil) {
+                identifier = @"customview-pin";
             }
             
-            pinView.pinColor = MKPinAnnotationColorPurple;
-            pinView.canShowCallout = YES;
+            MKAnnotationView *annotationView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+            if (annotationView == nil) {
+                annotationView = [[MKAnnotationView alloc] initWithAnnotation:ann reuseIdentifier:identifier];
+            }
+            
+            TiViewProxy *viewProxy = (TiViewProxy*)[userInfo objectForKey:@"customView"];
+            UIView *customView = (UIView*)[viewProxy view];
+            [customView setFrame:CGRectMake(0, 0, customView.frame.size.width, customView.frame.size.height)];
+            
+            annotationView.frame = customView.frame;
+            [annotationView addSubview:customView];
+            
+            [self setAnnotationProperties:annotationView dictionaty:userInfo];
+            
+            if (clusterAnnotation.isCluster) {
+                [self configureCounter];
+            }
+            
+            return annotationView;
+            
+        } else if ([userInfo objectForKey:@"image"]) {
+            if (identifier == nil) {
+                identifier = @"image-pin";
+            }
+            
+            MKAnnotationView *annotationView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+            if (annotationView == nil) {
+                annotationView = [[MKAnnotationView alloc] initWithAnnotation:ann reuseIdentifier:identifier];
+            }
+            
+            UIImage *image = [TiUtils image:[userInfo objectForKey:@"image"] proxy:self.mapViewProxy];
+            annotationView.image = image;
+            
+            [self setAnnotationProperties:annotationView dictionaty:userInfo];
+            
+            if (clusterAnnotation.isCluster) {
+                [self configureCounter];
+            }
+            
+            return annotationView;
+            
+        } else {
+            if (identifier == nil) {
+                identifier = @"pin";
+            }
+            
+            MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+            if (pinView == nil) {
+                pinView = [[MKPinAnnotationView alloc] initWithAnnotation:ann reuseIdentifier:identifier];
+            }
+            
+            if ([userInfo objectForKey:@"pincolor"]) {
+                switch ([[userInfo objectForKey:@"pincolor"] integerValue]) {
+                    case 0:
+                        pinView.pinColor = MKPinAnnotationColorRed;
+                        break;
+                        
+                    case 1:
+                        pinView.pinColor = MKPinAnnotationColorGreen;
+                        break;
+                        
+                    case 2:
+                        pinView.pinColor = MKPinAnnotationColorPurple;
+                        break;
+                        
+                    default:
+                        break;
+                }
+            } else {
+                pinView.pinColor = MKPinAnnotationColorRed;
+            }
+            
+            [self setAnnotationProperties:pinView dictionaty:userInfo];
             
             return pinView;
-        } else {
-            BGAnnotation *bgAnnonation = [[clusterAnnotation.annotations allObjects] objectAtIndex:0];
-            clusterAnnotation.title = bgAnnonation.title;
-            clusterAnnotation.subtitle = bgAnnonation.subtitle;
-            
-            if ([bgAnnonation.userInfo objectForKey:@"customView"]) {
-                MKAnnotationView *annotationView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"customview-pin"];
-                if (annotationView == nil) {
-                    annotationView = [[MKAnnotationView alloc] initWithAnnotation:bgAnnonation reuseIdentifier:@"customview-pin"];
-                }
-                
-                TiViewProxy *viewProxy = (TiViewProxy*)[bgAnnonation.userInfo objectForKey:@"customView"];
-                UIView *customView = (UIView*)[viewProxy view];
-                [customView setFrame:CGRectMake(0, 0, customView.frame.size.width, customView.frame.size.height)];
-                
-                annotationView.frame = customView.frame;
-                [annotationView addSubview:customView];
-                
-                [self setAnnotationProperties:annotationView dictionaty:bgAnnonation.userInfo];
-                
-                return annotationView;
-            
-            } else if ([bgAnnonation.userInfo objectForKey:@"image"]) {
-                //Image
-                MKAnnotationView *annotationView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"image-pin"];
-                if (annotationView == nil) {
-                    annotationView = [[MKAnnotationView alloc] initWithAnnotation:bgAnnonation reuseIdentifier:@"image-pin"];
-                }
-                
-                UIImage *image = [TiUtils image:[bgAnnonation.userInfo objectForKey:@"image"] proxy:self.mapViewProxy];
-                annotationView.image = image;
-                
-                [self setAnnotationProperties:annotationView dictionaty:bgAnnonation.userInfo];
-
-                return annotationView;
-                
-            } else {
-                //Default Pin
-                MKPinAnnotationView *pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"pin"];
-                if (pinView == nil) {
-                    pinView = [[MKPinAnnotationView alloc] initWithAnnotation:bgAnnonation reuseIdentifier:@"pin"];
-                }
-            
-                if ([bgAnnonation.userInfo objectForKey:@"pincolor"]) {
-                    switch ([[bgAnnonation.userInfo objectForKey:@"pincolor"] integerValue]) {
-                        case 0:
-                            pinView.pinColor = MKPinAnnotationColorRed;
-                            break;
-                            
-                        case 1:
-                            pinView.pinColor = MKPinAnnotationColorGreen;
-                            break;
-                            
-                        case 2:
-                            pinView.pinColor = MKPinAnnotationColorPurple;
-                            break;
-                            
-                        default:
-                            break;
-                    }
-                } else {
-                    pinView.pinColor = MKPinAnnotationColorRed;
-                }
-
-                [self setAnnotationProperties:pinView dictionaty:bgAnnonation.userInfo];
-                
-                return pinView;
-            }
         }
     }
     

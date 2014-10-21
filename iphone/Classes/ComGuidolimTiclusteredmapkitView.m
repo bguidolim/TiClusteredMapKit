@@ -157,6 +157,12 @@
     [self render];
 }
 
+-(void)setClusterPin_:(id)value {
+    ENSURE_SINGLE_ARG(value,NSDictionary);
+    
+    mapViewDelegate.clusterPin = value;
+}
+
 -(void)willFirePropertyChanges {
     regionFits = [TiUtils boolValue:[self.proxy valueForKey:@"regionFit"]];
     animate = [TiUtils boolValue:[self.proxy valueForKey:@"animate"]];
