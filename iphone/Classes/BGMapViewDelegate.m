@@ -91,7 +91,7 @@
 
 - (void)configureCounter:(MKAnnotationView *)annotationView count:(NSInteger)count {
     if ([self.clusterPin objectForKey:@"counterLabel"]) {
-        UILabel *label = [annotationView viewWithTag:999];
+        UILabel *label = (UILabel *)[annotationView viewWithTag:999];
         
         TiUILabelProxy *viewProxy = (TiUILabelProxy *)[self.clusterPin objectForKey:@"counterLabel"];
         id labelView = viewProxy.view;
@@ -101,9 +101,7 @@
         label.font = newLabel.font;
         label.textColor = newLabel.textColor;
         label.textAlignment = newLabel.textAlignment;
-        label.frame = newLabel.frame;
-        
-        [label sizeToFit];
+        label.frame = [labelView frame];
         [annotationView bringSubviewToFront:label];
     }
 }

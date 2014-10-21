@@ -113,8 +113,7 @@ MAKE_SYSTEM_PROP(ANNOTATION_GREEN, MKPinAnnotationColorGreen);
 	// example property setter
 }
 
--(id)createAnnotation:(id)args
-{
+-(id)createAnnotation:(id)args {
     ENSURE_SINGLE_ARG(args,NSDictionary);
     return args;
 }
