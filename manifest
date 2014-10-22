@@ -1,38 +1,8 @@
-#
-# this is your module manifest and used by Titanium
-# during compilation, packaging, distribution, etc.
-#
-version: 0.1
-apiversion: 2
-description: My module
-author: Bruno Guidolim
-license: The MIT License (MIT)
-
-Copyright (c) 2014 Bruno Guidolim
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-copyright: 2014 Bruno Guidolim
-
-
-# these should not be edited
-name: TiClusteredMapKit
-moduleid: com.guidolim.ticlusteredmapkit
-guid: 71121118-1f11-461e-9913-06ebf8378f5f
-platform: iphone
-minsdk: 3.0.0.GA
+#appname: TiClusteredMapKit
+#publisher: Bruno Guidolim
+#url: 
+#image: appicon.png
+#appid: com.guidolim.ticlusteredmapkit
+#desc: undefined
+#type: module
+#guid: 977fa9e6-a466-4970-9dfe-fa660c03591f

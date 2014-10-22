@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		24416B8111C4CA220047AFDD /* Build & Test */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 24416B8A11C4CA520047AFDD /* Build configuration list for PBXAggregateTarget "Build & Test" */;
+			buildPhases = (
+				24416B8011C4CA220047AFDD /* ShellScript */,
+			);
+			dependencies = (
+				24416B8511C4CA280047AFDD /* PBXTargetDependency */,
+			);
+			name = "Build & Test";
+			productName = "Build & test";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		24DD6CF91134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.h */; };
+		24DD6CFA1134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.m */; };
+		24DE9E1111C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.h */; };
+		24DE9E1211C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m */; };
+		AA747D9F0F9514B9006C5449 /* ComGuidolimTiclusteredmapkit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ComGuidolimTiclusteredmapkit_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		AF279EC019EE039D00C78D92 /* BGAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279EBE19EE039D00C78D92 /* BGAnnotation.h */; };
+		AF279EC119EE039D00C78D92 /* BGAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF279EBF19EE039D00C78D92 /* BGAnnotation.m */; };
+		AF279ECB19EE0D1F00C78D92 /* BGMapViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279EC919EE0D1F00C78D92 /* BGMapViewDelegate.h */; };
+		AF279ECC19EE0D1F00C78D92 /* BGMapViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF279ECA19EE0D1F00C78D92 /* BGMapViewDelegate.m */; };
+		AF279F1619EE2AD200C78D92 /* kp_2dtree.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F0619EE2AD200C78D92 /* kp_2dtree.h */; };
+		AF279F1719EE2AD200C78D92 /* KPAnnotation.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F0719EE2AD200C78D92 /* KPAnnotation.h */; };
+		AF279F1819EE2AD200C78D92 /* KPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF279F0819EE2AD200C78D92 /* KPAnnotation.m */; };
+		AF279F1919EE2AD200C78D92 /* KPAnnotationTree.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F0919EE2AD200C78D92 /* KPAnnotationTree.h */; };
+		AF279F1A19EE2AD200C78D92 /* KPAnnotationTree.m in Sources */ = {isa = PBXBuildFile; fileRef = AF279F0A19EE2AD200C78D92 /* KPAnnotationTree.m */; };
+		AF279F1B19EE2AD200C78D92 /* KPAnnotationTree_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F0B19EE2AD200C78D92 /* KPAnnotationTree_Private.h */; };
+		AF279F1C19EE2AD200C78D92 /* KPClusteringAlgorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F0C19EE2AD200C78D92 /* KPClusteringAlgorithm.h */; };
+		AF279F1D19EE2AD200C78D92 /* KPClusteringController.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F0D19EE2AD200C78D92 /* KPClusteringController.h */; };
+		AF279F1E19EE2AD200C78D92 /* KPClusteringController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF279F0E19EE2AD200C78D92 /* KPClusteringController.m */; };
+		AF279F1F19EE2AD200C78D92 /* KPGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F0F19EE2AD200C78D92 /* KPGeometry.h */; };
+		AF279F2019EE2AD200C78D92 /* KPGridClusteringAlgorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F1019EE2AD200C78D92 /* KPGridClusteringAlgorithm.h */; };
+		AF279F2119EE2AD200C78D92 /* KPGridClusteringAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = AF279F1119EE2AD200C78D92 /* KPGridClusteringAlgorithm.m */; };
+		AF279F2219EE2AD200C78D92 /* KPGridClusteringAlgorithm_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F1219EE2AD200C78D92 /* KPGridClusteringAlgorithm_Private.h */; };
+		AF279F2319EE2AD200C78D92 /* KPGridClusteringAlgorithmDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F1319EE2AD200C78D92 /* KPGridClusteringAlgorithmDelegate.h */; };
+		AF279F2419EE2AD200C78D92 /* NSArray+KP.h in Headers */ = {isa = PBXBuildFile; fileRef = AF279F1419EE2AD200C78D92 /* NSArray+KP.h */; };
+		AF279F2519EE2AD200C78D92 /* NSArray+KP.m in Sources */ = {isa = PBXBuildFile; fileRef = AF279F1519EE2AD200C78D92 /* NSArray+KP.m */; };
+		AF4FA66919ECC5C30022C899 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4FA66819ECC5C30022C899 /* MapKit.framework */; };
+		AF4FA66B19ECC5C80022C899 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4FA66A19ECC5C80022C899 /* CoreLocation.framework */; };
+		AF4FA67219ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.h in Headers */ = {isa = PBXBuildFile; fileRef = AF4FA67019ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.h */; };
+		AF4FA67319ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4FA67119ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.m */; };
+		AF4FA67619ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = AF4FA67419ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.h */; };
+		AF4FA67719ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4FA67519ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24416B8411C4CA280047AFDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = TiClusteredMapKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24DD6CF71134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComGuidolimTiclusteredmapkitModule.h; path = Classes/ComGuidolimTiclusteredmapkitModule.h; sourceTree = "<group>"; };
+		24DD6CF81134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComGuidolimTiclusteredmapkitModule.m; path = Classes/ComGuidolimTiclusteredmapkitModule.m; sourceTree = "<group>"; };
+		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
+		24DE9E0F11C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComGuidolimTiclusteredmapkitModuleAssets.h; path = Classes/ComGuidolimTiclusteredmapkitModuleAssets.h; sourceTree = "<group>"; };
+		24DE9E1011C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComGuidolimTiclusteredmapkitModuleAssets.m; path = Classes/ComGuidolimTiclusteredmapkitModuleAssets.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* ComGuidolimTiclusteredmapkit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComGuidolimTiclusteredmapkit_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AF279EBE19EE039D00C78D92 /* BGAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BGAnnotation.h; path = Classes/BGAnnotation.h; sourceTree = "<group>"; };
+		AF279EBF19EE039D00C78D92 /* BGAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BGAnnotation.m; path = Classes/BGAnnotation.m; sourceTree = "<group>"; };
+		AF279EC919EE0D1F00C78D92 /* BGMapViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BGMapViewDelegate.h; path = Classes/BGMapViewDelegate.h; sourceTree = "<group>"; };
+		AF279ECA19EE0D1F00C78D92 /* BGMapViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BGMapViewDelegate.m; path = Classes/BGMapViewDelegate.m; sourceTree = "<group>"; };
+		AF279F0619EE2AD200C78D92 /* kp_2dtree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kp_2dtree.h; sourceTree = "<group>"; };
+		AF279F0719EE2AD200C78D92 /* KPAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAnnotation.h; sourceTree = "<group>"; };
+		AF279F0819EE2AD200C78D92 /* KPAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAnnotation.m; sourceTree = "<group>"; };
+		AF279F0919EE2AD200C78D92 /* KPAnnotationTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAnnotationTree.h; sourceTree = "<group>"; };
+		AF279F0A19EE2AD200C78D92 /* KPAnnotationTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPAnnotationTree.m; sourceTree = "<group>"; };
+		AF279F0B19EE2AD200C78D92 /* KPAnnotationTree_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPAnnotationTree_Private.h; sourceTree = "<group>"; };
+		AF279F0C19EE2AD200C78D92 /* KPClusteringAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPClusteringAlgorithm.h; sourceTree = "<group>"; };
+		AF279F0D19EE2AD200C78D92 /* KPClusteringController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPClusteringController.h; sourceTree = "<group>"; };
+		AF279F0E19EE2AD200C78D92 /* KPClusteringController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPClusteringController.m; sourceTree = "<group>"; };
+		AF279F0F19EE2AD200C78D92 /* KPGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGeometry.h; sourceTree = "<group>"; };
+		AF279F1019EE2AD200C78D92 /* KPGridClusteringAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGridClusteringAlgorithm.h; sourceTree = "<group>"; };
+		AF279F1119EE2AD200C78D92 /* KPGridClusteringAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPGridClusteringAlgorithm.m; sourceTree = "<group>"; };
+		AF279F1219EE2AD200C78D92 /* KPGridClusteringAlgorithm_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGridClusteringAlgorithm_Private.h; sourceTree = "<group>"; };
+		AF279F1319EE2AD200C78D92 /* KPGridClusteringAlgorithmDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPGridClusteringAlgorithmDelegate.h; sourceTree = "<group>"; };
+		AF279F1419EE2AD200C78D92 /* NSArray+KP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+KP.h"; sourceTree = "<group>"; };
+		AF279F1519EE2AD200C78D92 /* NSArray+KP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+KP.m"; sourceTree = "<group>"; };
+		AF4FA66819ECC5C30022C899 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AF4FA66A19ECC5C80022C899 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AF4FA67019ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComGuidolimTiclusteredmapkitView.h; path = Classes/ComGuidolimTiclusteredmapkitView.h; sourceTree = "<group>"; };
+		AF4FA67119ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComGuidolimTiclusteredmapkitView.m; path = Classes/ComGuidolimTiclusteredmapkitView.m; sourceTree = "<group>"; };
+		AF4FA67419ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ComGuidolimTiclusteredmapkitViewProxy.h; path = Classes/ComGuidolimTiclusteredmapkitViewProxy.h; sourceTree = "<group>"; };
+		AF4FA67519ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComGuidolimTiclusteredmapkitViewProxy.m; path = Classes/ComGuidolimTiclusteredmapkitViewProxy.m; sourceTree = "<group>"; };
+		D2AAC07E0554694100DB518D /* libComGuidolimTiclusteredmapkit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libComGuidolimTiclusteredmapkit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF4FA66B19ECC5C80022C899 /* CoreLocation.framework in Frameworks */,
+				AF4FA66919ECC5C30022C899 /* MapKit.framework in Frameworks */,
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libComGuidolimTiclusteredmapkit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* TiClusteredMapKit */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = TiClusteredMapKit;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF4FA66A19ECC5C80022C899 /* CoreLocation.framework */,
+				AF4FA66819ECC5C30022C899 /* MapKit.framework */,
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AF279EBD19EE02C200C78D92 /* Custom */,
+				24DD6CF71134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.h */,
+				24DD6CF81134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.m */,
+				24DE9E0F11C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.h */,
+				24DE9E1011C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m */,
+				AF4FA67019ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.h */,
+				AF4FA67119ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.m */,
+				AF4FA67419ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.h */,
+				AF4FA67519ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* ComGuidolimTiclusteredmapkit_Prefix.pch */,
+				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		AF279EBD19EE02C200C78D92 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				AF279F0519EE2AD200C78D92 /* kingpin */,
+				AF279EBE19EE039D00C78D92 /* BGAnnotation.h */,
+				AF279EBF19EE039D00C78D92 /* BGAnnotation.m */,
+				AF279EC919EE0D1F00C78D92 /* BGMapViewDelegate.h */,
+				AF279ECA19EE0D1F00C78D92 /* BGMapViewDelegate.m */,
+			);
+			name = Custom;
+			sourceTree = "<group>";
+		};
+		AF279F0519EE2AD200C78D92 /* kingpin */ = {
+			isa = PBXGroup;
+			children = (
+				AF279F0619EE2AD200C78D92 /* kp_2dtree.h */,
+				AF279F0719EE2AD200C78D92 /* KPAnnotation.h */,
+				AF279F0819EE2AD200C78D92 /* KPAnnotation.m */,
+				AF279F0919EE2AD200C78D92 /* KPAnnotationTree.h */,
+				AF279F0A19EE2AD200C78D92 /* KPAnnotationTree.m */,
+				AF279F0B19EE2AD200C78D92 /* KPAnnotationTree_Private.h */,
+				AF279F0C19EE2AD200C78D92 /* KPClusteringAlgorithm.h */,
+				AF279F0D19EE2AD200C78D92 /* KPClusteringController.h */,
+				AF279F0E19EE2AD200C78D92 /* KPClusteringController.m */,
+				AF279F0F19EE2AD200C78D92 /* KPGeometry.h */,
+				AF279F1019EE2AD200C78D92 /* KPGridClusteringAlgorithm.h */,
+				AF279F1119EE2AD200C78D92 /* KPGridClusteringAlgorithm.m */,
+				AF279F1219EE2AD200C78D92 /* KPGridClusteringAlgorithm_Private.h */,
+				AF279F1319EE2AD200C78D92 /* KPGridClusteringAlgorithmDelegate.h */,
+				AF279F1419EE2AD200C78D92 /* NSArray+KP.h */,
+				AF279F1519EE2AD200C78D92 /* NSArray+KP.m */,
+			);
+			name = kingpin;
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF279ECB19EE0D1F00C78D92 /* BGMapViewDelegate.h in Headers */,
+				AF279F1619EE2AD200C78D92 /* kp_2dtree.h in Headers */,
+				AF279F1919EE2AD200C78D92 /* KPAnnotationTree.h in Headers */,
+				AF279F2219EE2AD200C78D92 /* KPGridClusteringAlgorithm_Private.h in Headers */,
+				AF279F1C19EE2AD200C78D92 /* KPClusteringAlgorithm.h in Headers */,
+				AA747D9F0F9514B9006C5449 /* ComGuidolimTiclusteredmapkit_Prefix.pch in Headers */,
+				AF279F2419EE2AD200C78D92 /* NSArray+KP.h in Headers */,
+				AF279F1F19EE2AD200C78D92 /* KPGeometry.h in Headers */,
+				AF279F1719EE2AD200C78D92 /* KPAnnotation.h in Headers */,
+				AF279F2319EE2AD200C78D92 /* KPGridClusteringAlgorithmDelegate.h in Headers */,
+				AF279F1B19EE2AD200C78D92 /* KPAnnotationTree_Private.h in Headers */,
+				24DD6CF91134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.h in Headers */,
+				AF4FA67219ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.h in Headers */,
+				AF279F1D19EE2AD200C78D92 /* KPClusteringController.h in Headers */,
+				AF4FA67619ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.h in Headers */,
+				AF279F2019EE2AD200C78D92 /* KPGridClusteringAlgorithm.h in Headers */,
+				24DE9E1111C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.h in Headers */,
+				AF279EC019EE039D00C78D92 /* BGAnnotation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* TiClusteredMapKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "TiClusteredMapKit" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TiClusteredMapKit;
+			productName = TiClusteredMapKit;
+			productReference = D2AAC07E0554694100DB518D /* libComGuidolimTiclusteredmapkit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "TiClusteredMapKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* TiClusteredMapKit */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* TiClusteredMapKit */,
+				24416B8111C4CA220047AFDD /* Build & Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24416B8011C4CA220047AFDD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here\n\npython \"${TITANIUM_SDK}/titanium.py\" run --dir=\"${PROJECT_DIR}\"\nexit $?\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24DD6CFA1134B3F500162E58 /* ComGuidolimTiclusteredmapkitModule.m in Sources */,
+				AF279F1E19EE2AD200C78D92 /* KPClusteringController.m in Sources */,
+				AF279F2119EE2AD200C78D92 /* KPGridClusteringAlgorithm.m in Sources */,
+				AF279ECC19EE0D1F00C78D92 /* BGMapViewDelegate.m in Sources */,
+				AF279F2519EE2AD200C78D92 /* NSArray+KP.m in Sources */,
+				AF279F1819EE2AD200C78D92 /* KPAnnotation.m in Sources */,
+				AF279F1A19EE2AD200C78D92 /* KPAnnotationTree.m in Sources */,
+				24DE9E1211C5FE74003F90F6 /* ComGuidolimTiclusteredmapkitModuleAssets.m in Sources */,
+				AF279EC119EE039D00C78D92 /* BGAnnotation.m in Sources */,
+				AF4FA67719ECC6CF0022C899 /* ComGuidolimTiclusteredmapkitViewProxy.m in Sources */,
+				AF4FA67319ECC6AD0022C899 /* ComGuidolimTiclusteredmapkitView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24416B8511C4CA280047AFDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* TiClusteredMapKit */;
+			targetProxy = 24416B8411C4CA280047AFDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DSTROOT = /tmp/ComGuidolimTiclusteredmapkit.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ComGuidolimTiclusteredmapkit_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-DDEBUG",
+					"-DTI_POST_1_2",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ComGuidolimTiclusteredmapkit;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/ComGuidolimTiclusteredmapkit.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ComGuidolimTiclusteredmapkit_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-DTI_POST_1_2";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ComGuidolimTiclusteredmapkit;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DSTROOT = /tmp/ComGuidolimTiclusteredmapkit.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ComGuidolimTiclusteredmapkit_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = (
+					"-DDEBUG",
+					"-DTI_POST_1_2",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ComGuidolimTiclusteredmapkit;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LIBRARY = "libstdc++";
+				DSTROOT = /tmp/ComGuidolimTiclusteredmapkit.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ComGuidolimTiclusteredmapkit_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DTI_POST_1_2";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = ComGuidolimTiclusteredmapkit;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		24416B8211C4CA220047AFDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Build & test";
+			};
+			name = Debug;
+		};
+		24416B8311C4CA220047AFDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "Build & test";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "TiClusteredMapKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "TiClusteredMapKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24416B8A11C4CA520047AFDD /* Build configuration list for PBXAggregateTarget "Build & Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24416B8211C4CA220047AFDD /* Debug */,
+				24416B8311C4CA220047AFDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
