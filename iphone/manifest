@@ -5,9 +5,9 @@
 version: 1.0.0
 apiversion: 2
 description: TiClusteredMapKit
-author: Your Name
-license: Specify your license
-copyright: Copyright (c) 2014 by Your Company
+author: Bruno Guidolim
+license: MIT License (MIT)
+copyright: Copyright (c) 2014 by Bruno Guidolim
 
 # these should not be edited
 name: TiClusteredMapKit
